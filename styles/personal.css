@@ -1,0 +1,32 @@
+
+#head{
+    border-bottom:2px solid lightgray;
+    margin-top:20px;
+}
+#maindiv{
+    border-radius:10px;
+    border:1px solid lightgray;
+    padding-bottom:40px;
+}
+nav{
+    margin-bottom:30px;
+}
+label{
+    font-weight:bold;
+    margin-right:10px;
+}
+input[type="radio"]
+{
+    margin-right:10px;
+}
+#submit{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+}
+#note{
+    border:1px black solid;
+    border-radius:10px;
+    background-color:lightgray;
+    padding:10px;
+}

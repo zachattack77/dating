@@ -1,0 +1,19 @@
+
+#head{
+    border-bottom:2px solid lightgray;
+    margin-top:20px;
+}
+#maindiv{
+    border-radius:10px;
+    border:1px solid lightgray;
+}
+nav{
+    margin-bottom:30px;
+}
+label{
+    font-weight:bold;
+}
+#submit{
+    position:absolute;
+    right:20px;
+}

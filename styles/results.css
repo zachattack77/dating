@@ -1,0 +1,38 @@
+
+#head{
+    border-bottom:2px solid lightgray;
+    margin-top:20px;
+}
+#maindiv{
+    border-radius:10px;
+    border:1px solid lightgray;
+    padding-bottom:50px;
+}
+p{
+    margin-bottom:0px;
+    border:1px solid lightgray;
+    border-radius:3px;
+    padding-bottom:15px;
+    padding-left:10px;
+}
+nav{
+    margin-bottom:30px;
+}
+label{
+    font-weight:bold;
+}
+#submit{
+    position:absolute;
+    right:20px;
+}
+#col1{
+    margin-top:20px;
+    border-radius:10px;
+}
+.paragraph{
+    margin-bottom:0px;
+}
+button{
+    margin:0 auto;
+    float:right;
+}
