@@ -1,64 +1,67 @@
-
-<!--
-Alex Shornal
-personal.html
-This is the form 1 page for a dating website to create a profile.
-2/2/2018
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Personal Information</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="./styles/personal.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <title>Personal Information</title>
 </head>
 <body>
-
-<nav class='navbar navbar-toggleable-sm mb-2' id="navigation-bar">
-    <div class='navbar-nav mr-auto'>
-        <a class='nav-item nav-link' href='http://ashornal.greenriverdev.com/328/assignments/week3/dating/'>My Dating Website</a>
+<nav class = "navbar bg-light navbar-light">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/328/dating/">My Dating Website</a>
     </div>
 </nav>
-<div class="container-fluid" style="padding-left: 35px">
-    <h1>Personal Information</h1>
-    <hr>
-    <form action="" method="post">
-        <div class="row">
+<div class="container" id="maindiv">
+    <h1 id="head">Personal Information</h1>
+    <form method="post" action="personal">
+        <div class = "row">
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type = "text" class="form-control" name = "fname" id="fname" value="{{@fname}}">
+                </div>
 
-            <div class="col-lg-8 ">
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" name = "lname" id="lname" value="{{@lname}}">
+                </div>
+                <p>{{ @errors['name'] }}</p>
+                <div class="form-group">
+                    <label class="form-control-label" for="age">Age</label>
+                    <input type="text" class="form-control" name = "age" id="age" value="{{@age}}">
+                    <p>{{ @errors['age'] }}</p>
+                </div>
 
-                <h5>First Name</h5>
-                <input class="form-control" type="text" name="firstName" value=""></br>
+                <div class="form-group">
+                    <label class="form-control-label">Gender</label>
+                    <div id = genders>
+                        <input type = "radio" name = "gender" value="Male" id="male">Male
+                        <input type = "radio" name = "gender" value="Female" id="female">Female
+                    </div>
+                </div>
 
-                <h5>Last Name</h5>
-                <input class="form-control" type="text" name="lastName" value=""></br>
+                <div class="form-group">
+                    <label class="form-control-label" for="phone">Phone Number</label>
+                    <input type = "text" class="form-control" name = "phone" id="phone" value="{{@phone}}">
+                    <p>{{ @errors['phone'] }}</p>
+                </div>
 
-                <h5>Age</h5>
-                <input class="form-control" type="text" name="age" value=""></br>
-
-                <h5>Gender</h5>
-                <label class="radio-inline"><input type="radio" name="gender" value="male" > Male</label>&nbsp;&nbsp;
-                <label class="radio-inline"><input type="radio" name="gender" value="female" > Female</label><br>
-
-                <h5>Phone Number</h5>
-                <input class="form-control" type="text" name="phone" value=""></br>
-
-
+                <div class="form-group">
+                    <label class="form-control-label" for="premium">Premium Membership</label><br>
+                    <input type="checkbox" name="premium" id="premium"> Sign me up for a Premium Account!
+                </div>
             </div>
 
-            <div class="col-lg-4">
-                <p id="note"><span id="bold">Note:</span> All information entered is protected by our
-                    <span id="policy">privacy policy</span>. Profile information can only be viewed by
-                    others with your permission.
-                </p>
+            <hr>
 
+            <div class="col-sm-3">
+                <p id="note"><strong>Note:</strong> All information entered is protected by our <a href="#">privacy policy</a>. Profile information can only be viewed by others with your permission.</p>
+                <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Next>">
             </div>
-        </div>
-        <div>
-            <button class="btn float-right btn-primary" name="submit" type="submit">Next ></button>
         </div>
     </form>
 </div>

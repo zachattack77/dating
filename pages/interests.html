@@ -1,76 +1,88 @@
+
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/interests.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <title>Interests</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="styles/styles.css">
-
-
 </head>
 <body>
-
-<div class="container-fluid" style="padding-left: 35px">
-    <h1>Interests</h1>
-    <hr>
-    <form action="formSummary" method="post">
-        <h5>In-door Interests</h5>
-        <div class="row">
-            <div class="col-sm">
-                <input type="checkbox" name="indoors[]" value="tv">&nbsp;&nbsp;tv</br>
-                <input type="checkbox" name="indoors[]" value="puzzles">&nbsp;&nbsp;puzzles
+<nav class = "navbar bg-light navbar-light">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/328/dating2/">My Dating Website</a>
+    </div>
+</nav>
+<div class="container" id="maindiv">
+    <h1 id="head">Interests</h1>
+    <form method="post" action="#">
+        <div class="form-group">
+            <label class="form-control-group">In-door Activities</label>
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "tv">tv
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "movies">movies
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "cooking">cooking
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "board games">board games
+                </div>
             </div>
-            <div class="col-sm">
-                <input type="checkbox" name="indoors[]" value="movies">&nbsp;&nbsp;movies</br>
-                <input type="checkbox" name="indoors[]" value="reading">&nbsp;&nbsp;reading
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "puzzles">puzzles
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "reading">reading
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "cards">playing cards
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="indoor[]" value = "video games">video games
+                </div>
             </div>
-            <div class="col-sm">
-                <input type="checkbox" name="indoors[]" value="cooking">&nbsp;&nbsp;cooking</br>
-                <input type="checkbox" name="indoors[]" value="playingcards">&nbsp;&nbsp;playing cards
-            </div>
-            <div class="col-sm">
-                <input type="checkbox" name="indoors[]" value="boardgames">&nbsp;&nbsp;board games</br>
-                <input type="checkbox" name="indoors[]" value="videogames">&nbsp;&nbsp;video games
-            </div>
+            <p>{{@errors['indoor']}}</p>
         </div>
-        </br>
-        <h5>Out-door Interests</h5>
-        <div class="row">
-            <div class="col-sm">
-                <input type="checkbox" name="outdoors[]" value="hiking">&nbsp;&nbsp;hiking</br>
-                <input type="checkbox" name="outdoors[]" value="walking">&nbsp;&nbsp;walking
+        <hr>
+        <div class="form-group">
+            <label class="form-control-group">Out-door interests</label>
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="checkbox" name="outdoor[]" value = "hiking">hiking
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="outdoor[]" value = "biking">biking
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="outdoor[]" value = "swimming">swimming
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="outdoor[]" value = "collecting">collecting
+                </div>
             </div>
-            <div class="col-sm">
-                <input type="checkbox" name="outdoors[]" value="biking">&nbsp;&nbsp;biking</br>
-                <input type="checkbox" name="outdoors[]" value="climbing">&nbsp;&nbsp;climbing
-            </div>
-            <div class="col-sm">
-                <input type="checkbox" name="outdoors[]" value="swimming">&nbsp;&nbsp;swimming</br>
-            </div>
-            <div class="col-sm">
-                <input type="checkbox" name="outdoors[]" value="collecting">&nbsp;&nbsp;collecting</br>
-            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="checkbox" name="outdoor[]" value = "walking">walking
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="outdoor[]" value = "climbing">climbing
+                </div>
+                <div class="col-sm-6">
+                    <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Next>">
+                </div>
 
-        </div>
-
-        <div>
-            <button class="btn btn-primary" type="submit" id="formbutton" name="submit">Next ></button>
+            </div>
+            <p>{{@errors['outdoor']}}</p>
         </div>
     </form>
-
-
 </div>
-
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </body>
 </html>
