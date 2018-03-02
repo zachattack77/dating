@@ -56,35 +56,3 @@ if(!validPhone($phone))
     $errors['phone'] = "Please enter a valid phone number. (No dashes)";
 }
 
-
-function validOutdoor($outdoor)
-{
-    if(!empty($outdoor)) {
-        foreach ($outdoor as $activity) {
-            if ($activity != "hiking" && $activity != "biking" &&
-                $activity != "swimming" && $activity != "collecting" &&
-                $activity != "walking" && $activity != "climbing") {
-                return false;
-            }
-        }
-    }else{
-        return false;
-    }
-    return true;
-}
-
-function validIndoor($indoor)
-{
-    if(!empty($indoor)) {
-        foreach ($indoor as $activity) {
-            if ($activity != "tv" && $activity != "movies" && $activity != "cooking" &&
-                $activity != "board games" && $activity != "puzzles" && $activity != "reading"
-                && $activity != "cards" && $activity != "video games") {
-                return false;
-            }
-        }
-    }else{
-        return false;
-    }
-    return true;
-}
