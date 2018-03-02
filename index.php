@@ -123,20 +123,7 @@ $f3->route('GET|POST /interests', function($f3) {
         $outdoor = $_POST['outdoor'];
         $errors = $_POST['errors'];
 
-        include('model/validate.php');
-
-        if(!isset($errors['indoor']) && !isset($errors['outdoor']))
-        {
-            $_SESSION['indoor']=$indoor;
-            $_SESSION['outdoor']=$outdoor;
-
-            $member = $_SESSION['member'];
-            $member->setInDoorActivities($indoor);
-            $member->setOutDoorActivities($outdoor);
-            $_SESSION['member'] = $member;
-
-            header("Location:summary");
-        }
+        header("Location:summary");
     }
 
     $f3->set('indoor',$indoor);
